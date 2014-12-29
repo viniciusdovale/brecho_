@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<title>{% block title %}Brecho.me | Monte seu brechó e comece a vender! Crie sua conta e comece a comprar!{% endblock %}</title>
+	{% block head %}
+	<link rel="icon" type="image/png" href="/static/img/favicon-196x196.png" sizes="196x196">
+    <link rel="icon" type="image/png" href="/static/img/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="/static/img/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/static/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/static/img/favicon-16x16.png" sizes="16x16">
+
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="static/css/main.min.css">	
+	{% endblock %}
+</head>
+<body>
+{% block menu %}
+	<main id="container">
+		<header id="header" class="clearfix">
+			<div class="wrapper">
+				<a href=""><img src="static/img/marca.png" alt=""></a>
+				<div id="interacao" class="right">
+					<ul id="menu">
+						<li><a href="">Ajuda</a></li>
+						{% if user and not user.is_anonymous %}
+     						<li> Oi {{ user.get_full_name|default:user.username }} <a href="{% url 'auth:logout' %}?next=/">Sair</a></li>
+     					{% else %}
+						<li><a href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}">Login com Facebook</a></li>
+						{% endif %}
+						<li><a href="">Navegar</a></li>
+					</ul>
+					<a href="" id="cadastro" class="radius right transition">Quero meu brechó</a>
+				</div>
+			</div>
+{% endblock %}
+		</header>
+		{% block slide %}
+		<div id="slide"></div>
+		{% endblock %}
+		{% block search %}
+		<form id="form-search" class="wrapper">
+			<p>vestidos, bolsas, sapatos, calças, bijuterias, relógios e muito mais</p>
+			<input type="text" name="search" placeholder="O que está procurando?" class="radius">
+			<button id="bt-search" class="radius transition">Buscar</button>
+			
+		</form>
+		{% endblock %}
+{% block content %}
+		<div id="home" class="wrapper clearfix">
+			<h1><span>Destaques</span> Brechó.me</h1>
+			<div class="box-products left view view-fifth">
+				<img class="img" src="static/img/img2.jpg" alt="">
+				<h2>Vestido Azul</h2>
+				<p><span>R$</span> 120<span>,00</span></p>
+				<div class="mask">
+					<div class="content-mask">
+						<h3>Vestido Azul</h3>
+						<ul class="interacoes-user">
+							<li><a href=""><img src="static/img/heart.png" alt=""></a></li>
+							<li><a href=""><img src="static/img/up.png" alt=""></a></li>
+							<li><a href=""><img src="static/img/bell.png" alt=""></a></li>
+						</ul>
+	                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+	                    <a href="#" class="info radius transition ">Ver produto</a>
+					</div>
+                </div>
+			</div>
+			<div class="box-products left view view-fifth">
+				<img class="img" src="static/img/img-produto.jpg" alt="">
+				<h2>Vestido Azul</h2>
+				<p><span>R$</span> 120<span>,00</span></p>
+				<div class="mask">
+                    <div class="content-mask">
+						<h3>Vestido Azul</h3>
+						<ul class="interacoes-user">
+							<li><a href=""><img src="static/img/heart.png" alt=""></a></li>
+							<li><a href=""><img src="static/img/up.png" alt=""></a></li>
+							<li><a href=""><img src="static/img/bell.png" alt=""></a></li>
+						</ul>
+	                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+	                    <a href="#" class="info radius transition ">Ver produto</a>
+					</div>
+                </div>
+			</div>
+			<div class="box-products left view view-fifth">
+				<img class="img" src="static/img/img3.jpg" alt="">
+				<h2>Vestido Azul</h2>
+				<p><span>R$</span> 120<span>,00</span></p>
+				<div class="mask">
+                    <div class="content-mask">
+						<h3>Vestido Azul</h3>
+						<ul class="interacoes-user">
+							<li><a href=""><img src="static/img/heart.png" alt=""></a></li>
+							<li><a href=""><img src="static/img/up.png" alt=""></a></li>
+							<li><a href=""><img src="static/img/bell.png" alt=""></a></li>
+						</ul>
+	                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+	                    <a href="#" class="info radius transition ">Ver produto</a>
+					</div>
+                </div>
+			</div>
+			<div class="box-products left view view-fifth">
+				<img class="img" src="static/img/img2.jpg" alt="">
+				<h2>Vestido Azul</h2>
+				<p><span>R$</span> 120<span>,00</span></p>
+				<div class="mask">
+                    <div class="content-mask">
+						<h3>Vestido Azul</h3>
+						<ul class="interacoes-user">
+							<li><a href=""><img src="static/img/heart.png" alt=""></a></li>
+							<li><a href=""><img src="static/img/up.png" alt=""></a></li>
+							<li><a href=""><img src="static/img/bell.png" alt=""></a></li>
+						</ul>
+	                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+	                    <a href="#" class="info radius transition ">Ver produto</a>
+					</div>
+                </div>
+			</div>
+			<div class="box-products left view view-fifth">
+				<img class="img" src="static/img/img-produto.jpg" alt="">
+				<h2>Vestido Azul</h2>
+				<p><span>R$</span> 120<span>,00</span></p>
+				<div class="mask">
+                    <div class="content-mask">
+						<h3>Vestido Azul</h3>
+						<ul class="interacoes-user">
+							<li><a href=""><img src="static/img/heart.png" alt=""></a></li>
+							<li><a href=""><img src="static/img/up.png" alt=""></a></li>
+							<li><a href=""><img src="static/img/bell.png" alt=""></a></li>
+						</ul>
+	                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+	                    <a href="#" class="info radius transition ">Ver produto</a>
+					</div>
+                </div>
+			</div>
+			<div class="box-products left view view-fifth">
+				<img class="img" src="static/img/img3.jpg" alt="">
+				<h2>Vestido Azul</h2>
+				<p><span>R$</span> 120<span>,00</span></p>
+				<div class="mask">
+                    <div class="content-mask">
+						<h3>Vestido Azul</h3>
+						<ul class="interacoes-user">
+							<li><a href=""><img src="static/img/heart.png" alt=""></a></li>
+							<li><a href=""><img src="static/img/up.png" alt=""></a></li>
+							<li><a href=""><img src="static/img/bell.png" alt=""></a></li>
+						</ul>
+	                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+	                    <a href="#" class="info radius transition ">Ver produto</a>
+					</div>
+                </div>
+			</div>
+		</div>
+	</main><!-- fim container -->
+	{% endblock %}
+
+	<!-- Scripts e bibliotecas -->
+	<script src="static/components/jquery/jquery.min.js"></script>
+	<script src="/static/js/modernizr.js"></script>
+	<script src="static/js/main.min.js"></script>
+</body>
+</html>

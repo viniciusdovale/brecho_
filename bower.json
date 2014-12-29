@@ -1,0 +1,24 @@
+{
+  "name": "brecho.me",
+  "version": "0.0.1",
+  "authors": [
+    "viniciusdovale <viniciusdovale10@gmail.com>"
+  ],
+  "main": "static/js/main.js",
+  "keywords": [
+    "brecho"
+  ],
+  "license": "MIT",
+  "homepage": "brecho.me",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1"
+  }
+}

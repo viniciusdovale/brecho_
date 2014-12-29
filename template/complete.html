@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block slide %} {% endblock %} 
+
+{% block search %}
+{% endblock %}
+
+{% block content %}
+
+<form method="post" action="{% url 'completar_perfil' %}">
+	  NickName: <input type="text" name="nick"><br>
+  	  Cidade:   <input type="text" name="cidade"><br>
+  	  Estado:   <input type="text" name="estado"><br>
+  	  <br>
+  	  <br>
+  	  Celular:  <input type="text" name="celular"><br>
+  	  Whatsapp: <input type="text" name="whatsapp"><br>
+  	  E-mail:   <input type="text" name="email"><br>
+  	  Facebook: <input type="text" name="facebook"><br>
+  	  Instagram:<input type="text" name="instagram"><br>
+
+  <input type="submit" value="Finalizar cadastro">	
+
+</form>
+{% endblock %} 
